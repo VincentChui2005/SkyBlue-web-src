@@ -1,0 +1,1 @@
+"venv\scripts\python" "start server.py"

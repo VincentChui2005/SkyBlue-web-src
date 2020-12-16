@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% load static %}
+{% load about_us_content %}
+
+{% block banner_word %}About Us{% endblock %}
+
+{% block content %}
+    {% cwrapper as divs %}
+    {{ divs | safe }}
+{% endblock %}

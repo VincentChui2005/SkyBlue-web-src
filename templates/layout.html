@@ -1,0 +1,142 @@
+{% load static %}
+{% load section_break %}{% section_breaker as sb %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sky Blue Entertainment</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/24690732c6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="banner">
+        <nav class="w3-bar" id="nav-bar" style="color: white; position: sticky;">
+            <a style="float: left; padding-top: 10px; padding-left: 30px; width: 40%;" id="logo" href="{% url 'others:home' %}">
+                <img src="{% static 'logo.png' %}" width="4%" height="4%">
+                <span class="logo-comp-name"><b>Sky Blue Enterainment Company</b></span>
+            </a> <!-- Logo -->
+            <div>
+                <a class="w3-bar-item item">Our Work</a>
+                <a class="w3-bar-item item" href="{% url 'others:about_us' %}">About Us</a>
+                <a class="w3-bar-item item" href="{% url 'others:home' %}">Home</a>
+            </div>
+        </nav>
+        <p class="banner-wd">{% block banner_word %}{% endblock %}</p>
+    </div>
+
+    <div class="padding-lr">
+        <section class="content">
+            {% block content %}{% endblock %}
+        </section>
+
+        {{ sb|safe }}
+
+        <footer style="text-align: center; color: white; padding-top: 20px">
+            <h3><i><b>Sky Blue Entertainment Company</b></i></h3>
+            <div style="padding-bottom: 50px;  text-align: left; margin-left: 150px;">
+                <a href style="margin-bottom: 10px; display: block; text-decoration: none;"><b><u>SKY BLUE</u></b></a><br>
+                <div class="footer-content">
+                    <a href="{% url 'others:about_us' %}">About Us</a>
+                    <a href>Our Work</a>
+                    <a href>Our Client</a>
+                    <a href>Link</a>
+                    <a href>Contact Us</a>
+                    <a href>Join Us</a>
+                </div><br><br>
+                <a href style="margin-bottom: 10px; display: inline-block; text-decoration: none;">
+                    <b style="text-decoration: none">CONTACT US ON: </b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:business.skyblueco@gmail.com" style="text-decoration: none"><i class="fas fa-envelope icon"></i>&nbsp;business.skyblueco@gmail.com</a>
+                </a><br><br>
+
+                <a href style="margin-bottom: 10px; display: inline-block; text-decoration: none; ">
+                    <b style="text-decoration: none">FOLLOW US ON: </b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/skyblue_ent/"><i class="fab fa-instagram icon" style="font-size: 20px;"></i></a>
+                </a><br>
+
+            </div>
+            ©2020 by Sky Blue Entertainment Company
+        </footer>
+    </div>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+    * {
+        font-family: 'Merriweather', serif;
+    }
+
+    .footer-content a {
+        padding-right: 50px;
+    }
+
+    #logo {
+        color: white;
+    }
+
+    #nav-bar a {
+        float: right;
+        font-family: "Merriweather", serif;
+        text-decoration: none;
+    }
+
+    .item:hover {
+        font-weight: bold;
+    }
+
+    .banner {
+        margin: 0;
+        background-position: center center;
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.6)
+        ),
+        url("{% static 'banner.png' %}");
+        padding-bottom: 20px;
+    }
+
+    .banner-wd {
+        font-size: 45pt;
+        font-style: italic;
+        font-weight: 900;
+        letter-spacing: -0.9px;
+        line-height: 1.26;
+        text-align: center;
+        color: white;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .icon {
+        vertical-align: middle;
+    }
+
+    .padding-lr {
+        background-color: rgba(75,64,64,1);
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .logo-comp-name {
+        padding-left: 10px;
+        padding-top: 5px;
+        font-size: 15pt;
+        letter-spacing: 2px;
+    }
+
+    {# Use when section break tag is loaded #}
+    .section-break {
+        background-color: rgba(75,64,64,1);
+    }
+
+    {# Use when section break tag is loaded #}
+    .breaker {
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.150000006);
+    }
+</style>
+
+{% block other %}{% endblock %}
+
+</html>
