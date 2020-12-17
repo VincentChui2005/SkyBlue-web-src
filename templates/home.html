@@ -11,48 +11,52 @@
         <a style="text-decoration: underline; letter-spacing: 1px; font-size: 13pt; font-weight: 900" href="mailto:business.skyblueco@gmail.com">business.skyblueco@gmail.com</a>
     </div>
     {{ sb | safe }}
-    {% cwrapper as divs %}
-    {{ divs | safe }}
+    {% about_us as about_us_content %}
+    {{ about_us_content | safe }}
     {{ sb | safe }}
     <div style="text-align: center; color: white; padding-bottom: 1.5rem; padding-top: 1.5rem;">
         <b style="font-size: 26pt">OUR WORK</b><br><br>
-        <div class="our-work-grid">
+
+        <div class="our-work">
             <div>
                 <img src="{% static 'our work/music production.jpg' %}" width="100%">
                 <h4>Music Production</h4>
                 <p>From song arrangement to recording and post-production</p>
-
-                <img src="{% static 'our work/stage performance.jpg' %}" width="100%">
-                <h4>Stage Performance</h4>
-                <p>Entertaining audiences by singing</p>
             </div>
             <div>
                 <img src="{% static 'our work/video production.jpg' %}" width="100%">
                 <h4>Video Production</h4>
-                <p>From conception and script production to shooting and post-production</p><br>
-
-                <div class="no-img"></div><br>
-                <h4>Branded Content</h4>
-                <p>We tailor it to the audience’s interests and provide influential and entertaining branded content</p>
+                <p>From conception and script production to shooting and post-production</p>
             </div>
             <div>
                 <img src="{% static 'our work/talent management.png' %}" width="100%">
                 <h4>Talent Management</h4>
                 <p>We look for and grow our pool of influencers to realise their potential and achieve their goals</p>
-
+            </div>
+            <div>
+                <img src="{% static 'our work/stage performance.jpg' %}" width="100%">
+                <h4>Stage Performance</h4>
+                <p>Entertaining audiences by singing</p>
+            </div>
+            <div>
+                <div class="no-img"></div><br>
+                <h4>Branded Content</h4>
+                <p>We tailor it to the audience’s interests and provide influential and entertaining branded content</p>
+            </div>
+            <div>
                 <div class="no-img"></div><br>
                 <h4>Influencer Marketing</h4>
                 <p>Interact and connect with your audience through our influencers</p>
             </div>
-        </div><br><br>
-        <div class="goto-our-work">
-            <a href="{% url 'our_work:home' %}">See More</a>
+            <div></div>
+            <a href="{% url 'our_work:home' %}" class="our-work-btn">See More</a>
+            <div></div>
         </div>
     </div>
 {% endblock %}
 
 {% block other %}
-    <script>
+    <script>  {# About us button #}
         let words = document.getElementById("about-us-words")
         let gotodiv = document.createElement("div")
         gotodiv.style = "background-color: white; text-align: center; padding-top: 5px; padding-bottom: 5px"
@@ -65,53 +69,29 @@
     </script>
 
     <style>
-        .our-work-grid {
+        .our-work {
             display: inline-grid;
-            grid-template-columns: 32% 32% 32%;
-            grid-gap: 30px;
             text-align: center;
-        }
-
-        .our-work-grid h4 {
-            font-family: 'Merriweather', serif;
-            font-weight: 900;
-            padding-bottom: 5px;
-            padding-top: 5px;
-        }
-
-        .our-work-grid p {
-            font-size: 12pt;
-            font-weight: 400;
-            line-height: 1.56;
-        }
-
-        .our-work-grid br {
-            padding-bottom: 10px;
-        }
-
-        .our-work-grid img, .our-work-grid p, .no-img{
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
+            grid-template-columns: 30% 30% 30%;
+            grid-template-rows: 46% 46% 4%;
+            grid-gap: 30px;
+            width: 100%;
+            margin: 0;
         }
 
         .no-img {
-            height: 27.5%;
+            height: 70%;
             background-color: rgba(255,255,255,.2);
             outline: 2px dashed rgba(255,255,255,.32);
 
         }
 
-        .goto-our-work {
+        .our-work-btn {
             background-color: white;
             text-align: center;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-
-        .goto-our-work a {
+            padding: 5px ;
             color: rgba(75,64,64,1);
             text-decoration: none;
-            text-align: center;
         }
     </style>
 {% endblock %}

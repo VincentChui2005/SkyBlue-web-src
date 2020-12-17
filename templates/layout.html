@@ -26,10 +26,7 @@
     </div>
 
     <div class="padding-lr">
-        <section class="content">
-            {% block content %}{% endblock %}
-        </section>
-
+        {% block content %}{% endblock %}
         {{ sb|safe }}
 
         <footer style="text-align: center; color: white; padding-top: 20px">
@@ -114,8 +111,8 @@
 
     .padding-lr {
         background-color: rgba(75,64,64,1);
-        padding-left: 20%;
-        padding-right: 20%;
+        padding-left: 15%;
+        padding-right: 15%;
     }
 
     .logo-comp-name {

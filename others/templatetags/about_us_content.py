@@ -4,9 +4,9 @@ from django import template
 register = template.Library()
 
 @register.simple_tag()
-def cwrapper():
+def about_us():
     return """
-            <div class="content-wrapper" > <!-- Wrapper -->
+            <div class="about-us" > <!-- Wrapper -->
                 <div style="text-align: center"><img src="/static/logo.png" style="position: relative; float: right; margin-top: 90px" width="100%"></div>
                 <div style="text-align: left; color: white; font-size: 12pt;" id="about-us-words">
                     <h1 style="font-family: 'Merriweather', serif;">We are Sky Blue Entertainment Company</h1>
@@ -16,7 +16,7 @@ def cwrapper():
                 </div>
             </div>
             <style>
-                .content-wrapper {
+                .about-us {
                     width: 100%;
                     grid-template-columns: 40% 60%;
                     display: inline-grid;

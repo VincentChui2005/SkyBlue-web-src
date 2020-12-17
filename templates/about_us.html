@@ -5,6 +5,6 @@
 {% block banner_word %}About Us{% endblock %}
 
 {% block content %}
-    {% cwrapper as divs %}
-    {{ divs | safe }}
+    {% about_us as about_us_content %}
+    {{ about_us_content | safe }}
 {% endblock %}
