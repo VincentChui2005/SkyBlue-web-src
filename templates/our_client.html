@@ -1,0 +1,37 @@
+{% extends "layout.html"%}
+{% load static %}
+{% load section_break %}{% section_breaker as sb %}
+
+{% block banner_word %}Our Clients{% endblock %}
+
+{% block content %}
+    <div style="text-align: center; color: white; padding-bottom: 1.5rem; padding-top: 1.5rem;">
+        <b style="font-size: 16pt">We are honored to cooperate with the following brands in various industries.</b><br><br>
+        <div class="our-client-grid">
+            <div>
+                <img src="{% static 'our client/lemonsvivi.png' %}" width="100%">
+                <a href="https://www.instagram.com/lemonsvivi/">lemonsvivi</a>
+            </div>
+            <div>
+                <img src="{% static 'our client/Fairy Jewellery Shop.png' %}" width="100%">
+                <a href="https://www.carousell.com.hk/fairyjewelleryshop?_branch_match_id=850705758283460286&utm_medium=sharing&utm_source=android_native_share">Fairy Jewellery Shop</a>
+            </div>
+            <div>
+                <img src="{% static 'our client/South Sea Global Services Limited.png' %}" width="100%">
+                <a href="https://sites.google.com/view/ssgshk">South Sea Global Services Limited</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block other %}
+    <style>
+        .our-client-grid {
+            display: inline-grid;
+            grid-template-columns: 32% 32% 32%;
+            grid-gap: 10px;
+            letter-spacing: 1pt;
+            font-weight: 900;
+        }
+    </style>
+{% endblock %}

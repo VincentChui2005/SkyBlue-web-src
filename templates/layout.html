@@ -17,7 +17,11 @@
                 <span class="logo-comp-name"><b>Sky Blue Enterainment Company</b></span>
             </a> <!-- Logo -->
             <div>
-                <a class="w3-bar-item item">Our Work</a>
+                <a class="w3-bar-item item" href="{% url 'others:join_us' %}">Join Us</a>
+                <a class="w3-bar-item item" href="{% url 'others:contact_us' %}">Contact Us</a>
+                <a class="w3-bar-item item" href="{% url 'others:link' %}">Link</a>
+                <a class="w3-bar-item item" href="{% url 'others:our_client' %}">Our Client</a>
+                <a class="w3-bar-item item" href="{% url 'our_work:home' %}">Our Work</a>
                 <a class="w3-bar-item item" href="{% url 'others:about_us' %}">About Us</a>
                 <a class="w3-bar-item item" href="{% url 'others:home' %}">Home</a>
             </div>
@@ -27,7 +31,7 @@
 
     <div class="padding-lr">
         {% block content %}{% endblock %}
-        {{ sb|safe }}
+        {{ sb | safe }}
 
         <footer style="text-align: center; color: white; padding-top: 20px">
             <h3><i><b>Sky Blue Entertainment Company</b></i></h3>
@@ -35,11 +39,11 @@
                 <a href style="margin-bottom: 10px; display: block; text-decoration: none;"><b><u>SKY BLUE</u></b></a><br>
                 <div class="footer-content">
                     <a href="{% url 'others:about_us' %}">About Us</a>
-                    <a href>Our Work</a>
-                    <a href>Our Client</a>
-                    <a href>Link</a>
-                    <a href>Contact Us</a>
-                    <a href>Join Us</a>
+                    <a href="{% url 'our_work:home' %}">Our Work</a>
+                    <a href="{% url 'others:our_client' %}">Our Client</a>
+                    <a href="{% url 'others:link' %}">Link</a>
+                    <a href="{% url 'others:contact_us' %}">Contact Us</a>
+                    <a href="{% url 'others:join_us' %}">Join Us</a>
                 </div><br><br>
                 <a href style="margin-bottom: 10px; display: inline-block; text-decoration: none;">
                     <b style="text-decoration: none">CONTACT US ON: </b>
