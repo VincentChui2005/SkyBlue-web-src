@@ -1,0 +1,45 @@
+{% extends "layout.html"%}
+{% load static %}
+
+{% block banner_word %}Join Us{% endblock %}
+
+{% block content %}
+    <div style="text-align: center; color: white; padding-bottom: 1.5rem; padding-top: 1.5rem;">
+        <div class="join-us-grid">
+            <div>
+                <h5>Job Application</h5>
+                <p class="messages">Dear applicant, <br><br>Sky Blue Entertainment Company was formally established in 2020. Its main business includes music production, artist management. In addition to music, it is also responsible for film production, as well as multimedia. <br><br>We hope our life can be different. No one can know how long our life is, and what will happen in the future. Since we have our heart to do music and film production, we are not going to postpone, and do it right now. <br><br>Blue is the colour of sky. For me, sky is representing dreams. So our name is ‘Sky Blue Entertainment Company’, hope to use this name to remind everyone that we must be always full of dreams and whether in a valley or despair, stick to our dreams. As long as you stick to it, your dream will come true one day. <br><br>Thank you for expressing your interest in our company. Please fill in the form accordingly and attach the document needed. We will get back to you once we have any update. <br><br>Your sincerely,<br>Sky Blue Entertainment Company</p>
+            </div>
+            <div>
+                <h5>Actor Recruitment</h5>
+                <p class="messages">Actor recruitment is now in progress! Regardless of whether you have experience in filming or not, we welcome you to come and participate! <br><br>Do you have your own story? Do you like shooting? Do you want to increase your knowledge of shooting? Do you want to participate in the filming? Do you want to try what it's like to be an actor? <br><br>Candidate requirements: Love acting, unlimited experience, talented in acting, regardless of age, height, or weight. Everyone is welcome to participate. <br><br>Please be sure to fill in the following information clearly, so that we can understand you better, thank you. <br><br>When we have a shooting, we will make a selection, so stay tuned.<br><br>*Sky Blue Entertainment is still operating on a small scale, and different works are only small-scale works which are sent out freely. Just to find suitable person around us, so there is no salary. Sorry for any uncomfortable.</p>
+            </div>
+            <div>
+                <h5>Behind-the-scenes Recruitment</h5>
+                <p class="messages">Behind-the-scenes recruitment is now in progress! Whether you have shooting experience or not, we welcome you to participate! <br><br>If you love production, welcome to sign up and choose to be our behind-the-scenes team immediately, to make new films together, and it is up to you to rendition everything with videos. <br><br>Behind-the-scenes requirements: Love production, regardless of experience, age, height, or weight. Everyone is welcome to participate. <br><br>Please make sure to fill in the following information clearly so that we can better understand you, thank you. <br><br>When we have a shooting, we will make a selection, so stay tuned. <br><br>*Sky Blue Eentertaiment is still operating on a small scale, and different works are only small-scale works which are sent out freely. Just to find suitable person around us, so there is no salary. Sorry for any uncomfortable.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block other %}
+    <style>
+        .join-us-grid {
+            display: inline-grid;
+            grid-template-columns: 32% 32% 32%;
+            grid-gap: 10px;
+            font-weight: 900;
+        }
+
+        .messages {
+            text-align: left;
+            font-weight: normal;
+
+        }
+
+        h5 {
+            font-weight: 900;
+
+        }
+    </style>
+{% endblock %}

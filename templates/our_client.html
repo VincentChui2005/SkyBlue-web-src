@@ -1,12 +1,11 @@
 {% extends "layout.html"%}
 {% load static %}
-{% load section_break %}{% section_breaker as sb %}
 
 {% block banner_word %}Our Clients{% endblock %}
 
 {% block content %}
     <div style="text-align: center; color: white; padding-bottom: 1.5rem; padding-top: 1.5rem;">
-        <b style="font-size: 16pt">We are honored to cooperate with the following brands in various industries.</b><br><br>
+        <b style="font-size: 16pt" class="heading">We are honored to cooperate with the following brands in various industries.</b><br><br>
         <div class="our-client-grid">
             <div>
                 <img src="{% static 'our client/lemonsvivi.png' %}" width="100%">

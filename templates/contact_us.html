@@ -1,0 +1,39 @@
+{% extends "layout.html"%}
+{% load static %}
+
+{% block banner_word %}Contact Us{% endblock %}
+
+{% block content %}
+    <div style="text-align: center; color: white; padding-bottom: 1.5rem; padding-top: 1.5rem;">
+        <b style="font-size: 16pt">Send a business inquiry to us and we will get back to you in no time!</b><br><br>
+        <a class="contact-us-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScVc2Cg3zJBA37LN9yeRHobecuNKIvIMGGvc_czm6VAA61hqA/viewform">Any business inquiry</a><br>
+        <div class="contact-us-grid">
+            <div style="text-align: left; font-weight: 900">
+                <p style="font-size: 18pt;">E-mail:</p>
+                <a href="mailto:business.skyblueco@gmail.com">business.skyblueco@gmail.com</a>
+            </div>
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=%E6%A5%AD%E9%81%8B%E5%B7%A5%E6%A5%AD%E5%A4%A7&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com">what is my ip</a></div><style>.mapouter{position:relative;text-align:right;height:400px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:600px;}</style></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block other %}
+    <style>
+        .contact-us-grid {
+            display: inline-grid;
+            grid-template-columns: 50% 50%;
+            grid-gap: 10px;
+            letter-spacing: 1pt;
+            font-weight: 900;
+            margin-top: 30px;
+        }
+
+        .contact-us-btn {
+            background-color: white;
+            text-align: center;
+            padding: 5px 100px;
+            color: rgba(75,64,64,1);
+            text-decoration: none;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "layout.html"%}
+{% load static %}
+
+{% block banner_word %}Links{% endblock %}
+
+{% block content %}
+    <div style="text-align: center; color: white; padding-bottom: 1.5rem; padding-top: 1.5rem;">
+        <div class="link-grid">
+            <div>
+                {% with skyblue_ent="https://www.instagram.com/skyblue_ent/" %}
+                    <a href="{{ skyblue_ent }}"><img src="{% static 'link/instagram.png' %}" width="100%"></a>
+                    <p>Follow us on Instagram</p>
+                    <a href="{{ skyblue_ent }}">skyblue_ent</a>
+                {% endwith %}
+            </div>
+            <div>
+                {% with claudia_ho_yt="https://www.youtube.com/channel/UC2cOXmn6GTIk1GP7g3aCjjQ" %}
+                    <a href="{{ claudia_ho_yt }}"><img src="{% static 'link/youtube.png' %}" width="100%"></a>
+                    <p>Subscribe Ho Pui Yau Claudia YouTube channel</p>
+                    <a href="{{ claudia_ho_yt }}">Claudia Ho</a>
+                {% endwith %}
+            </div>
+            <div>
+                {% with claudiaho_ig="https://www.instagram.com/claudiaho/" %}
+                    <a href="{{ claudiaho_ig }}"><img src="{% static 'link/instagram.png' %}" width="100%"></a>
+                    <p>Follow Ho Pui Yau Claudia in Instagram</p>
+                    <a href="{{ claudiaho_ig }}">claudiaho</a>
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block other %}
+    <style>
+        .link-grid {
+            display: inline-grid;
+            grid-template-columns: 32% 32% 32%;
+            grid-gap: 10px;
+            letter-spacing: 1pt;
+            font-weight: 900;
+        }
+    </style>
+{% endblock %}

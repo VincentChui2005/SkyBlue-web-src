@@ -1,51 +1,48 @@
 {% extends "layout.html" %}
 {% load static %}
-{% load about_us_content %}
-{% load section_break %}{% section_breaker as sb %}
 
 {% block banner_word %}Create meaningful and interesting content{% endblock %}
 
 {% block content %}
     <div style="text-align: center; color: white; padding-bottom: 1.5rem; padding-top: 1.5rem;">
-        <b style="font-size: 26pt">CONTACT US</b><br><br>
+        <b style="font-size: 26pt" class="heading">CONTACT US</b><br><br>
         <a style="text-decoration: underline; letter-spacing: 1px; font-size: 13pt; font-weight: 900" href="mailto:business.skyblueco@gmail.com">business.skyblueco@gmail.com</a>
     </div>
-    {{ sb | safe }}
-    {% about_us as about_us_content %}
-    {{ about_us_content | safe }}
-    {{ sb | safe }}
+    {% include "section_break.html"%}
+    {% include "about_us_content.html" %}
+    {% include "section_break.html"%}
     <div style="text-align: center; color: white; padding-bottom: 1.5rem; padding-top: 1.5rem;">
-        <b style="font-size: 26pt">OUR WORK</b><br><br>
+        <b style="font-size: 26pt" class="heading">OUR WORK</b><br><br>
 
         <div class="our-work">
             <div>
                 <img src="{% static 'our work/music production.jpg' %}" width="100%">
-                <h4>Music Production</h4>
+                <h4 class="heading">Music Production</h4>
                 <p>From song arrangement to recording and post-production</p>
             </div>
             <div>
                 <img src="{% static 'our work/video production.jpg' %}" width="100%">
-                <h4>Video Production</h4>
+                <h4 class="heading">Video Production</h4>
                 <p>From conception and script production to shooting and post-production</p>
             </div>
             <div>
                 <img src="{% static 'our work/talent management.png' %}" width="100%">
-                <h4>Talent Management</h4>
+                <h4 class="heading">Talent Management</h4>
                 <p>We look for and grow our pool of influencers to realise their potential and achieve their goals</p>
             </div>
             <div>
                 <img src="{% static 'our work/stage performance.jpg' %}" width="100%">
-                <h4>Stage Performance</h4>
+                <h4 class="heading">Stage Performance</h4>
                 <p>Entertaining audiences by singing</p>
             </div>
             <div>
                 <div class="no-img"></div><br>
-                <h4>Branded Content</h4>
+                <h4 class="heading">Branded Content</h4>
                 <p>We tailor it to the audience’s interests and provide influential and entertaining branded content</p>
             </div>
             <div>
                 <div class="no-img"></div><br>
-                <h4>Influencer Marketing</h4>
+                <h4 class="heading">Influencer Marketing</h4>
                 <p>Interact and connect with your audience through our influencers</p>
             </div>
             <div></div>
@@ -74,24 +71,26 @@
             text-align: center;
             grid-template-columns: 32% 32% 32%;
             grid-template-rows: 46% 46% 4%;
+            justify-content: space-evenly;
             grid-gap: 30px;
             width: 100%;
             margin: 0;
         }
 
-        .no-img {
-            height: 70%;
-            background-color: rgba(255,255,255,.2);
-            outline: 2px dashed rgba(255,255,255,.32);
-
-        }
-
         .our-work-btn {
             background-color: white;
             text-align: center;
-            padding: 5px ;
+            padding: 5px;
             color: rgba(75,64,64,1);
             text-decoration: none;
+        }
+
+        h4 {
+            font-family: "Merriweather", serif;
+        }
+
+        .no-img {
+            height: 16vw;
         }
     </style>
 {% endblock %}

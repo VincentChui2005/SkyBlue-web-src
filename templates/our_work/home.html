@@ -1,0 +1,79 @@
+{% extends "layout.html"%}
+{% load static %}
+
+{% block banner_word %}Our Work{% endblock %}
+
+{% block content %}
+    <div style="text-align: center; color: white; padding-bottom: 1.5rem; padding-top: 1.5rem;">
+        <i><b style="font-size: 16pt; font-family: Lora, serif" class="heading">We are proud when every work and activity is completed. Here are some we want to share</b></i><br><br>
+        <div class="our-client-grid heading">
+            <div>
+                <div class="no-img"></div>
+                <b>Digital Singles</b><br>
+                <a href="{% url 'our_work:digital_singles' %}">View Projects</a>
+            </div>
+            <div>
+                <img src="{% static 'our work/home/music covers.png' %}" width="100%">
+                <b>Music Covers</b><br>
+                <a href="{% url 'our_work:music_covers' %}">View Projects</a>
+            </div>
+            <div>
+                <div class="no-img"></div>
+                <b>Official Music Videos</b><br>
+                <a href="{% url 'our_work:official_music_videos' %}">View Projects</a>
+            </div>
+            <div>
+                <div class="no-img"></div>
+                <b>Video Production</b><br>
+                <a href="{% url 'our_work:video_production' %}">View Projects</a>
+            </div>
+            <div>
+                <img src="{% static 'our work/home/talent management.png' %}" width="100%">
+                <b>Talent Management</b><br>
+                <a href="{% url 'our_work:talent_management' %}">View Projects</a>
+            </div>
+            <div>
+                <div class="no-img"></div>
+                <b>Stage Performance</b><br>
+                <a href="{% url 'our_work:stage_performance' %}">View Projects</a>
+            </div>
+            <div>
+                <div class="no-img"></div>
+                <b>Branded Content</b><br>
+                <a href="{% url 'our_work:branded_content' %}">View Projects</a>
+            </div>
+            <div>
+                <div class="no-img"></div>
+                <b>Influencer Marketing</b><br>
+                <a href="{% url 'our_work:influencer_marketing' %}">View Projects</a>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block other %}
+    <style>
+        .our-client-grid {
+            display: inline-grid;
+            grid-template-columns: 49% 49%;
+            grid-template-rows: 24% 24% 24% 24%;
+            grid-gap: 50px;
+            letter-spacing: 1pt;
+            font-weight: 900;
+            justify-content: space-evenly;
+            text-align: left;
+            padding-bottom: 1.5em;
+            padding-top: 1.5em;
+        }
+
+        .no-img {
+            height: 14vw;
+        }
+
+        .padding-lr {
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+    </style>
+{% endblock %}
