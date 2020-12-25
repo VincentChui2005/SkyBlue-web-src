@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}Ho Pui Yau Claudia{% endblock %}
+
+{% block content %}
+    <div class="talent-grid">
+        <img src="{% static 'our work/talent management/ho pui yau claudia.png' %}" width="100%">
+        <div>
+            <h4 class="heading" style="text-align: center">Claudia何沛悠</h4><br><br>
+            <p style="color: white; font-family: 'Times New Roman', serif">My name is Claudia and I am 15 years old. I was born on October 4 in Hong Kong. I am grade 10 right now, my major subjects are physics, chemistry and biology. <br><br>Currently, I am the managing director of Sky Blue Entertainment Company. My father is a managing director and my mother is an accountant. I grew up in a family which full of love. <br><br>I am just like any average teen, enjoy being surrounded by friends. I love to participate in group activities, for instance, choir. My friends describe me as a sociable and optimistic person. I love having new friends. During 2019 summer holiday, I had a wonderful experience travelling to United Kingdom, meeting tons of amazing people. <br><br>I love music a lot, it makes me happy and relax. I play different instruments, such as piano, cello and guitar. Once I start playing, I’m immersed in the song and melody, feeling better than ever. I sing too, I sing for a lot of years. I sing different styles and different languages of songs. I love to use singing to express my feelings instead of telling others word by word. <br><br>I’m really passionate about music and dancing. I’ve been in ballet and piano classes since 2! Performing arts taught me to be patient and that hardwork always pays off.</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block other %}
+    <style>
+        .talent-grid {
+            width: 100%;
+            grid-template-columns: 40% 60%;
+            display: inline-grid;
+            grid-gap: 20px;
+            padding-top: 50px;
+            margin: 0;
+        }
+    </style>
+{% endblock %}

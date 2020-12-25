@@ -21,8 +21,11 @@ def video_production(request):
     return render(request, "our_work/video_production.html")
 
 
-def talent_management(request):
-    return render(request, "our_work/talent_management.html")
+def talent_management(request, person=None):
+    if person is None:
+        return render(request, "our_work/talent_management.html")
+    else:
+        return render(request, "our_work/talents/{}.html".format(person.replace("-", "_")))
 
 
 def stage_performance(request):
